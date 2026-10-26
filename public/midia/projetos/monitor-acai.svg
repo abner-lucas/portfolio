@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="800" height="500" fill="#ff6b4a"/>
+  <circle cx="160" cy="110" r="64" fill="#f5b83d"/>
+  <path d="M0 400c120-30 260-30 400 0s280 30 400 0v100H0z" fill="#7a3a1d"/>
+  <!-- açaizeiro -->
+  <path d="M260 420c6-90 10-170 4-250" stroke="#0c1a15" stroke-width="12"/>
+  <g stroke="#13976a" stroke-width="9">
+    <path d="M264 170c-60-10-110 10-150 50M264 170c-40-40-90-50-140-40M264 170c10-50 50-80 100-90M264 170c50-20 110-10 150 30M264 170c40 10 80 40 100 80"/>
+  </g>
+  <g fill="#4b1f5e" stroke="#0c1a15" stroke-width="3">
+    <circle cx="252" cy="200" r="9"/><circle cx="268" cy="206" r="9"/><circle cx="244" cy="216" r="9"/>
+    <circle cx="260" cy="222" r="9"/><circle cx="276" cy="222" r="9"/><circle cx="252" cy="236" r="9"/><circle cx="268" cy="240" r="9"/>
+  </g>
+  <!-- sensor -->
+  <g stroke="#0c1a15" stroke-width="5">
+    <rect x="470" y="300" width="70" height="56" rx="10" fill="#fff"/>
+    <path d="M490 356v60M520 356v60" stroke-width="6"/>
+    <circle cx="505" cy="328" r="10" fill="#22b07d"/>
+  </g>
+  <path d="M556 290c20-20 20-50 0-70M578 310c34-34 34-86 0-120" stroke="#fff" stroke-width="6"/>
+  <!-- gráfico de umidade -->
+  <g transform="translate(590 70)" stroke="#0c1a15" stroke-width="4">
+    <rect width="170" height="120" rx="16" fill="#fff"/>
+    <path d="M20 90l30-20 30 10 30-40 40 20" stroke="#ff6b4a" stroke-width="6"/>
+    <path d="M20 100h130" opacity=".3"/>
+  </g>
+  <path d="M380 450c15-10 30-10 45 0M640 440c15-10 30-10 45 0" stroke="#fff" stroke-width="4" opacity=".7"/>
+</svg>

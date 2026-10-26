@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="800" height="500" fill="#c8f05a"/>
+  <g stroke="#0c1a15" stroke-width="2" opacity=".18">
+    <path d="M0 100h800M0 200h800M0 300h800M0 400h800M100 0v500M200 0v500M300 0v500M400 0v500M500 0v500M600 0v500M700 0v500"/>
+  </g>
+  <!-- planificação do cubo -->
+  <g stroke="#0c1a15" stroke-width="4" transform="translate(70 70)">
+    <rect x="60" y="0" width="60" height="60" fill="#fff"/>
+    <rect x="0" y="60" width="60" height="60" fill="#fff"/>
+    <rect x="60" y="60" width="60" height="60" fill="#7c5cff"/>
+    <rect x="120" y="60" width="60" height="60" fill="#fff"/>
+    <rect x="180" y="60" width="60" height="60" fill="#fff"/>
+    <rect x="60" y="120" width="60" height="60" fill="#fff"/>
+    <path d="M90 200c30 40 80 50 130 40" stroke-dasharray="2 10" stroke-width="5"/>
+    <path d="M206 228l16 12-14 14"/>
+  </g>
+  <!-- cubo isométrico -->
+  <g stroke="#0c1a15" stroke-width="5" transform="translate(330 230)">
+    <path d="M0 40 80 0l80 40-80 40z" fill="#fff"/>
+    <path d="M0 40v100l80 40V80z" fill="#7c5cff"/>
+    <path d="M160 40v100l-80 40V80z" fill="#5b3ee0"/>
+  </g>
+  <!-- pirâmide -->
+  <g stroke="#0c1a15" stroke-width="5" transform="translate(540 110)">
+    <path d="M80 0 0 150l80 40z" fill="#ff6b4a"/>
+    <path d="M80 0l90 140-90 50z" fill="#c2401f"/>
+  </g>
+  <!-- cilindro -->
+  <g stroke="#0c1a15" stroke-width="5" transform="translate(560 330)">
+    <path d="M0 30v80c0 17 40 30 80 30s80-13 80-30V30" fill="#3a8dff"/>
+    <ellipse cx="80" cy="30" rx="80" ry="30" fill="#e0ecff"/>
+  </g>
+  <g fill="#0c1a15">
+    <path d="M720 50l8 18 18 8-18 8-8 18-8-18-18-8 18-8z"/>
+    <path d="M300 90l5 11 11 5-11 5-5 11-5-11-11-5 11-5z"/>
+    <circle cx="120" cy="420" r="8"/>
+  </g>
+</svg>

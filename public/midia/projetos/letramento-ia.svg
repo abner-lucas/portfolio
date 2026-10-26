@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="800" height="500" fill="#7c5cff"/>
+  <circle cx="640" cy="90" r="160" fill="#8f73ff"/>
+  <!-- rede neural -->
+  <g stroke="#ebe5ff" stroke-width="3" opacity=".8">
+    <path d="M470 150l110 60M470 150l110 140M470 250l110-40M470 250l110 80M470 350l110-140M470 350l110-20M580 210l110 60M580 290l110-20M580 330l110-60"/>
+  </g>
+  <g stroke="#0c1a15" stroke-width="4">
+    <circle cx="470" cy="150" r="22" fill="#c8f05a"/>
+    <circle cx="470" cy="250" r="22" fill="#fff"/>
+    <circle cx="470" cy="350" r="22" fill="#c8f05a"/>
+    <circle cx="580" cy="210" r="22" fill="#fff"/>
+    <circle cx="580" cy="290" r="22" fill="#ff6b4a"/>
+    <circle cx="580" cy="330" r="16" fill="#fff"/>
+    <circle cx="690" cy="270" r="28" fill="#f5b83d"/>
+  </g>
+  <!-- balões de conversa -->
+  <g stroke="#0c1a15" stroke-width="5">
+    <path d="M70 90h270a24 24 0 0 1 24 24v80a24 24 0 0 1-24 24H140l-40 34v-34H70a24 24 0 0 1-24-24v-80a24 24 0 0 1 24-24z" fill="#fff"/>
+    <path d="M150 280h220a24 24 0 0 1 24 24v70a24 24 0 0 1-24 24h-30v34l-40-34H150a24 24 0 0 1-24-24v-70a24 24 0 0 1 24-24z" fill="#c8f05a"/>
+  </g>
+  <g stroke="#0c1a15" stroke-width="7">
+    <path d="M90 135h180M90 172h230"/>
+    <path d="M170 322h150M170 358h100"/>
+  </g>
+  <g fill="#fff">
+    <path d="M410 70l9 20 20 9-20 9-9 20-9-20-20-9 20-9z"/>
+    <path d="M80 400l6 13 13 6-13 6-6 13-6-13-13-6 13-6z"/>
+  </g>
+</svg>

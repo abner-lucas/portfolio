@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* O modo escuro é controlado pela classe `.dark` no <html>
+   (definida antes da pintura em app/layout.tsx). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/* Tokens de cor                                                       */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --fundo: #f3f5ef;
+  --superficie: #ffffff;
+  --superficie-2: #e9eee6;
+  --tinta: #0c1a15;
+  --tinta-suave: #4a5b53;
+  --borda: #d9e1d6;
+  --marca: #0e7a54;
+  --marca-forte: #0a5b3f;
+  --sobre-marca: #ffffff;
+  --foco: #0e7a54;
+
+  /* "Palco": painéis escuros de destaque, iguais nos dois temas. */
+  --palco: #0b1f19;
+  --palco-borda: #1f3d33;
+  --palco-tinta: #eaf3ee;
+  --palco-suave: #a4bcb1;
+
+  --lima: #c8f05a;
+  --coral: #ff6b4a;
+  --violeta: #7c5cff;
+  --ambar: #f5b83d;
+  --azul: #3a8dff;
+  --verde: #22b07d;
+
+  --sombra: 0 1px 2px rgb(12 26 21 / 0.04), 0 12px 32px -12px rgb(12 26 21 / 0.14);
+  color-scheme: light;
+}
+
+.dark {
+  --fundo: #070d0b;
+  --superficie: #0e1714;
+  --superficie-2: #15221d;
+  --tinta: #e6efea;
+  --tinta-suave: #9db1a7;
+  --borda: #1f2f29;
+  --marca: #3dd69b;
+  --marca-forte: #74e7b9;
+  --sobre-marca: #04120d;
+  --foco: #74e7b9;
+
+  --palco: #0d241d;
+  --palco-borda: #1e4237;
+
+  --sombra: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+/* Tons de destaque: cada cartão define `--tom` (cor viva) e `--tom-suave` (fundo). */
+.tom-verde   { --tom: #13976a; --tom-suave: #dcf3e8; --tom-vivo: var(--verde); }
+.tom-lima    { --tom: #4f6b00; --tom-suave: #eefad0; --tom-vivo: var(--lima); }
+.tom-coral   { --tom: #c2401f; --tom-suave: #ffe5de; --tom-vivo: var(--coral); }
+.tom-violeta { --tom: #5b3ee0; --tom-suave: #ebe5ff; --tom-vivo: var(--violeta); }
+.tom-ambar   { --tom: #8f5b00; --tom-suave: #fdefd2; --tom-vivo: var(--ambar); }
+.tom-azul    { --tom: #1c63d1; --tom-suave: #e0ecff; --tom-vivo: var(--azul); }
+
+.dark .tom-verde   { --tom: #4be0a6; --tom-suave: #10291f; }
+.dark .tom-lima    { --tom: #c8f05a; --tom-suave: #1f2a0c; }
+.dark .tom-coral   { --tom: #ff8d72; --tom-suave: #2f1610; }
+.dark .tom-violeta { --tom: #a994ff; --tom-suave: #1d1736; }
+.dark .tom-ambar   { --tom: #f7c763; --tom-suave: #2c2109; }
+.dark .tom-azul    { --tom: #7cb3ff; --tom-suave: #0f1f38; }
+
+/* ------------------------------------------------------------------ */
+/* Tailwind                                                            */
+/* ------------------------------------------------------------------ */
+
+@theme inline {
+  --color-fundo: var(--fundo);
+  --color-superficie: var(--superficie);
+  --color-superficie-2: var(--superficie-2);
+  --color-tinta: var(--tinta);
+  --color-tinta-suave: var(--tinta-suave);
+  --color-borda: var(--borda);
+  --color-marca: var(--marca);
+  --color-marca-forte: var(--marca-forte);
+  --color-sobre-marca: var(--sobre-marca);
+  --color-palco: var(--palco);
+  --color-palco-borda: var(--palco-borda);
+  --color-palco-tinta: var(--palco-tinta);
+  --color-palco-suave: var(--palco-suave);
+  --color-lima: var(--lima);
+  --color-coral: var(--coral);
+  --color-violeta: var(--violeta);
+  --color-ambar: var(--ambar);
+  --color-azul: var(--azul);
+  --color-verde: var(--verde);
+  --color-tom: var(--tom);
+  --color-tom-suave: var(--tom-suave);
+  --color-tom-vivo: var(--tom-vivo);
+
+  --font-sans: var(--fonte-texto), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--fonte-display), var(--fonte-texto), ui-sans-serif, sans-serif;
+  --font-mono: var(--fonte-mono), ui-monospace, monospace;
+  --font-mao: var(--fonte-mao), cursive;
+
+  --shadow-cartao: var(--sombra);
+  --ease-suave: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--fundo);
+  color: var(--tinta);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection { background: var(--lima); color: #0c1a15; }
+
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 3px;
+}
+.no-palco :focus-visible,
+.no-palco:focus-visible { outline-color: var(--lima); }
+
+h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; letter-spacing: -0.02em; }
+p { text-wrap: pretty; }
+
+/* Diálogos nativos */
+dialog { color: inherit; }
+dialog::backdrop { background: rgb(4 10 8 / 0.62); backdrop-filter: blur(6px); }
+dialog[open] { animation: dialogo-entra 0.45s var(--ease-suave); }
+dialog[open]::backdrop { animation: fade-entra 0.3s ease-out; }
+@keyframes dialogo-entra { from { opacity: 0; transform: translateY(24px) scale(0.97); } }
+@keyframes fade-entra { from { opacity: 0; } }
+
+/* Rolagem horizontal sem barra (carrossel, filtros) */
+.sem-barra { scrollbar-width: none; }
+.sem-barra::-webkit-scrollbar { display: none; }
+
+/* Faixa infinita */
+@keyframes faixa { to { transform: translateX(-50%); } }
+.faixa-trilho { animation: faixa 40s linear infinite; }
+.faixa:hover .faixa-trilho, .faixa:focus-within .faixa-trilho { animation-play-state: paused; }
+
+/* Grão sutil sobre os painéis escuros */
+.grao::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------------ */
+/* Robótica: robozinho e cursor de terminal                            */
+/* ------------------------------------------------------------------ */
+
+.robo-led { animation: robo-led 1.4s ease-in-out infinite; }
+@keyframes robo-led { 50% { opacity: 0.35; } }
+
+.robo-olhos { transform-box: fill-box; transform-origin: center; animation: robo-piscar 4.5s infinite; }
+@keyframes robo-piscar { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+
+.robo-braco { transform-box: view-box; transform-origin: 63px 70px; animation: robo-acenar 2.2s ease-in-out infinite; }
+@keyframes robo-acenar { 0%, 60%, 100% { transform: rotate(0deg); } 70% { transform: rotate(-22deg); } 80% { transform: rotate(8deg); } 90% { transform: rotate(-16deg); } }
+
+.cursor-terminal { animation: cursor-terminal 1s steps(1) infinite; }
+@keyframes cursor-terminal { 50% { opacity: 0; } }
+
+/* ------------------------------------------------------------------ */
+/* Tela de carregamento                                                */
+/* ------------------------------------------------------------------ */
+
+/* Some sozinha mesmo sem JavaScript; não aparece em visitas repetidas. */
+.carregamento { animation: carregamento-sai 0.7s var(--ease-suave) 1.6s forwards; }
+html[data-visitado] .carregamento { display: none; }
+@keyframes carregamento-sai {
+  to { clip-path: inset(0 0 100% 0); visibility: hidden; }
+}
+.carregamento-barra { animation: carregamento-barra 1.4s var(--ease-suave) forwards; transform-origin: left; }
+@keyframes carregamento-barra { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Transição circular ao trocar o tema (View Transitions API) */
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }

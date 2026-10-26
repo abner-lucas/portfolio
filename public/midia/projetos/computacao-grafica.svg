@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="800" height="500" fill="#3a8dff"/>
+  <!-- eixos -->
+  <path d="M140 400V120" stroke="#c8f05a" stroke-width="5"/>
+  <path d="M140 400h280" stroke="#ff6b4a" stroke-width="5"/>
+  <path d="M140 400 50 465" stroke="#f5b83d" stroke-width="5"/>
+  <g fill="#0c1a15" font-family="monospace" font-size="26" font-weight="700">
+    <text x="130" y="108">Y</text><text x="430" y="408">X</text><text x="24" y="488">Z</text>
+  </g>
+  <!-- esfera em malha -->
+  <g transform="translate(540 240)" stroke="#fff" stroke-width="3">
+    <circle r="150" fill="#1c63d1" stroke="#0c1a15" stroke-width="6"/>
+    <ellipse rx="150" ry="50"/><ellipse rx="150" ry="100" opacity=".6"/>
+    <ellipse rx="50" ry="150"/><ellipse rx="100" ry="150" opacity=".6"/>
+    <path d="M0-150V150M-150 0H150" opacity=".8"/>
+  </g>
+  <!-- câmera e frustum -->
+  <g transform="translate(200 140)">
+    <path d="M90 60 250 0M90 60 250 170M90 60 300 90" stroke="#e0ecff" stroke-width="4" stroke-dasharray="4 10"/>
+    <g stroke="#0c1a15" stroke-width="5">
+      <rect x="0" y="30" width="80" height="60" rx="10" fill="#fff"/>
+      <path d="M80 45l30-14v58l-30-14z" fill="#c8f05a"/>
+      <circle cx="40" cy="60" r="15" fill="#0c1a15"/>
+    </g>
+  </g>
+  <path d="M730 50l8 18 18 8-18 8-8 18-8-18-18-8 18-8z" fill="#fff"/>
+</svg>

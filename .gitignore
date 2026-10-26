@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+versao-anterior-ai-studio.zip
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Locais (não publicar)
+CLAUDE.local.md
+.hostinger/

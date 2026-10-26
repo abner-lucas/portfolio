@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="800" height="500" fill="#22b07d"/>
+  <!-- sete camadas -->
+  <g stroke="#0c1a15" stroke-width="4">
+    <path transform="translate(250 410)" d="M0 0 150-50 300 0 150 50z" fill="#ff6b4a"/>
+    <path transform="translate(250 360)" d="M0 0 150-50 300 0 150 50z" fill="#f5b83d"/>
+    <path transform="translate(250 310)" d="M0 0 150-50 300 0 150 50z" fill="#c8f05a"/>
+    <path transform="translate(250 260)" d="M0 0 150-50 300 0 150 50z" fill="#fff"/>
+    <path transform="translate(250 210)" d="M0 0 150-50 300 0 150 50z" fill="#7cb3ff"/>
+    <path transform="translate(250 160)" d="M0 0 150-50 300 0 150 50z" fill="#a994ff"/>
+    <path transform="translate(250 110)" d="M0 0 150-50 300 0 150 50z" fill="#ffe5de"/>
+  </g>
+  <g fill="#0c1a15" font-family="monospace" font-size="22" font-weight="700" text-anchor="middle">
+    <text x="400" y="418">1</text><text x="400" y="368">2</text><text x="400" y="318">3</text>
+    <text x="400" y="268">4</text><text x="400" y="218">5</text><text x="400" y="168">6</text><text x="400" y="118">7</text>
+  </g>
+  <!-- pacote viajando entre as camadas -->
+  <path d="M600 90c60 60 60 260 0 320" stroke="#fff" stroke-width="6" stroke-dasharray="3 12"/>
+  <g stroke="#0c1a15" stroke-width="4">
+    <rect x="628" y="220" width="56" height="44" rx="8" fill="#fff"/>
+    <path d="M628 232l28 16 28-16"/>
+  </g>
+  <!-- bandeira da missão -->
+  <g stroke="#0c1a15" stroke-width="5">
+    <path d="M120 380V190" stroke-width="6"/>
+    <path d="M120 190h90l-20 30 20 30h-90z" fill="#c8f05a"/>
+  </g>
+</svg>

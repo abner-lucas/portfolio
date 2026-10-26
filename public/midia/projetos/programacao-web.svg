@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="800" height="500" fill="#f5b83d"/>
+  <circle cx="680" cy="420" r="150" fill="#f7c763"/>
+  <!-- janela do navegador -->
+  <g stroke="#0c1a15" stroke-width="5">
+    <rect x="90" y="70" width="430" height="320" rx="22" fill="#fff"/>
+    <path d="M90 120h430"/>
+    <circle cx="125" cy="95" r="8" fill="#ff6b4a"/><circle cx="152" cy="95" r="8" fill="#f5b83d"/><circle cx="179" cy="95" r="8" fill="#22b07d"/>
+    <rect x="120" y="145" width="370" height="60" rx="10" fill="#e0ecff"/>
+    <rect x="120" y="225" width="110" height="130" rx="10" fill="#ffe5de"/>
+    <rect x="250" y="225" width="110" height="130" rx="10" fill="#dcf3e8"/>
+    <rect x="380" y="225" width="110" height="130" rx="10" fill="#ebe5ff"/>
+  </g>
+  <!-- editor de código -->
+  <rect x="450" y="220" width="280" height="200" rx="20" fill="#0c1a15" stroke="#0c1a15" stroke-width="5"/>
+  <g stroke-width="8">
+    <path d="M480 260h70" stroke="#ff8d72"/><path d="M565 260h90" stroke="#c8f05a"/>
+    <path d="M500 295h120" stroke="#7cb3ff"/><path d="M500 330h60" stroke="#f7c763"/><path d="M575 330h100" stroke="#a994ff"/>
+    <path d="M480 365h90" stroke="#ff8d72"/>
+  </g>
+  <text x="560" y="150" fill="#0c1a15" font-family="monospace" font-size="64" font-weight="700">&lt;/&gt;</text>
+</svg>
