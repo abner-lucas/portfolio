@@ -15,7 +15,6 @@ interface RepositorioApi {
   name: string;
   stargazers_count: number;
   pushed_at: string;
-  homepage: string | null;
   fork: boolean;
 }
 
@@ -45,7 +44,7 @@ export interface DadosGithub {
   totalRepositorios: number | null;
 }
 
-/** Completa os subapps com estrelas, última atualização e link de demonstração. */
+/** Completa os subapps com estrelas e última atualização. O link de demonstração vem só de `conteudo/subapps.ts`. */
 export async function carregarDadosGithub(usuario: string, subapps: Subapp[]): Promise<DadosGithub> {
   const repositorios = await buscarRepositorios(usuario);
   if (!repositorios) return { subapps, totalRepositorios: null };
@@ -60,7 +59,6 @@ export async function carregarDadosGithub(usuario: string, subapps: Subapp[]): P
         ...s,
         estrelas: r.stargazers_count,
         atualizadoEm: r.pushed_at.slice(0, 10),
-        demo: s.demo ?? (r.homepage || undefined),
       };
     }),
   };
