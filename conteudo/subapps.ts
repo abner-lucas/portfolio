@@ -43,7 +43,7 @@ export const subapps: Subapp[] = [
       'Rodízio aleatório de sensores de umidade do solo (FDR) no sistema agroflorestal irrigado de açaí do Campus Breves, com exportação para planilhas.',
     tecnologias: ['Next.js', 'Supabase', 'SheetJS'],
     repositorio: 'monitor-acai',
-    demo: 'https://monitor-acai.vercel.app',
+    demo: 'https://monitoracai.profabnerlucas.com',
     capa: 'monitor-acai',
     tom: 'coral',
     incorporavel: true,
