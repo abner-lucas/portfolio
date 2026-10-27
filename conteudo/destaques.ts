@@ -12,7 +12,7 @@ export const destaques: Destaque[] = [
     titulo: 'Geo3D: sólidos que se abrem na sua tela',
     texto:
       'Gire, planifique e projete cinco sólidos geométricos. Dez desafios para revisar Computação Gráfica no seu ritmo.',
-    link: { rotulo: 'Abrir o Geo3D', url: 'https://geo3d-lab-interativo.vercel.app/' },
+    link: { rotulo: 'Conhecer o Geo3D', url: 'https://github.com/abner-lucas/geo3d-lab-interativo-cg' },
     tom: 'lima',
   },
   {

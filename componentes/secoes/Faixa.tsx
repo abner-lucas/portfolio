@@ -14,7 +14,6 @@ const ITENS = [
   'IoT',
   'Tinkercad',
   'Blender',
-  'Supabase',
   'Git & GitHub',
 ];
 

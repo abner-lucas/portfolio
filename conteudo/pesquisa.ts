@@ -19,7 +19,7 @@ export const trabalhos: Trabalho[] = [
     titulo: 'MonitorAçaí: rodízio de sensores de umidade do solo no SAF de açaí do Campus Breves',
     categoria: 'Pesquisa aberta',
     ano: 2026,
-    detalhe: 'IoT · Next.js · Supabase',
+    detalhe: 'IoT · Next.js',
     url: 'https://github.com/abner-lucas/monitor-acai',
     emAndamento: true,
   },

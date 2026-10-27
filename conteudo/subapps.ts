@@ -15,12 +15,11 @@ export const subapps: Subapp[] = [
     categoria: 'Computação Gráfica',
     descricao:
       'Cinco sólidos com animações de planificação, projeções ortogonais e dez desafios. Acessível (WCAG 2.2 AA) e com Libras.',
-    tecnologias: ['Three.js', 'Next.js', 'Supabase'],
+    tecnologias: ['Three.js', 'Next.js', 'Acessibilidade'],
     repositorio: 'geo3d-lab-interativo-cg',
-    demo: 'https://geo3d-lab-interativo.vercel.app/',
     capa: 'geo3d',
     tom: 'lima',
-    incorporavel: true,
+    incorporavel: false,
   },
   {
     id: 'letramento-ia',
@@ -41,7 +40,7 @@ export const subapps: Subapp[] = [
     categoria: 'Pesquisa · IoT',
     descricao:
       'Rodízio aleatório de sensores de umidade do solo (FDR) no sistema agroflorestal irrigado de açaí do Campus Breves, com exportação para planilhas.',
-    tecnologias: ['Next.js', 'Supabase', 'SheetJS'],
+    tecnologias: ['Next.js', 'IoT', 'SheetJS'],
     repositorio: 'monitor-acai',
     demo: 'https://monitoracai.profabnerlucas.com',
     capa: 'monitor-acai',

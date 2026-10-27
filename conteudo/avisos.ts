@@ -51,7 +51,7 @@ export const avisos: Aviso[] = [
       'Usem o laboratório para revisar sólidos, planificações e projeções ortogonais. Ele funciona no celular e tem recursos de acessibilidade.',
     disciplina: 'computacao-grafica',
     data: '2026-10-09',
-    link: { rotulo: 'Abrir o Geo3D', url: 'https://geo3d-lab-interativo.vercel.app/' },
+    link: { rotulo: 'Conhecer o Geo3D', url: 'https://github.com/abner-lucas/geo3d-lab-interativo-cg' },
   },
   {
     id: '2026-09-osi',

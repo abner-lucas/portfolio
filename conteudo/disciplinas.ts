@@ -53,7 +53,7 @@ export const disciplinas: Disciplina[] = [
       { titulo: 'Projeto 01 · Página com 3D', tipo: 'exercicio', url: `${CG}/01-pagina-com-3d/index.html`, descricao: 'Primeira cena Three.js carregando um modelo GLB.' },
       { titulo: 'Roteiro · Site com Modelos 3D', tipo: 'apostila', url: `${CG}/02-atividade-site-com-modelos-3d/pagina-orientacoes/dist/index.html`, descricao: '3ª avaliação, em dupla: etapas, gerador de ZIP e critérios.' },
       { titulo: 'Modelo de página para os estudantes', tipo: 'exercicio', url: 'https://abner-lucas.github.io/webpage-modelo-3d/' },
-      { titulo: 'Geo3D · Laboratório interativo', tipo: 'portal', url: 'https://geo3d-lab-interativo.vercel.app/', descricao: 'Sólidos, planificações, projeções ortogonais e desafios.' },
+      { titulo: 'Geo3D · Laboratório interativo', tipo: 'repositorio', url: 'https://github.com/abner-lucas/geo3d-lab-interativo-cg', descricao: 'Sólidos, planificações, projeções ortogonais e desafios.' },
       { titulo: 'Código-fonte no GitHub', tipo: 'repositorio', url: 'https://github.com/abner-lucas/computacao-grafica' },
     ],
   },
@@ -65,7 +65,7 @@ export const disciplinas: Disciplina[] = [
     cargaHoraria: 67,
     periodo: '2026.1',
     resumo:
-      'HTML5 semântico, CSS3 com Flexbox e Grid, JavaScript para interatividade e publicação com Git, GitHub Pages e Vercel.',
+      'HTML5 semântico, CSS3 com Flexbox e Grid, JavaScript para interatividade e publicação com Git e GitHub Pages.',
     topicos: ['HTML5 semântico', 'Formulários acessíveis', 'Flexbox e Grid', 'Variáveis e transições CSS', 'DOM e eventos', 'Git e deploy'],
     icone: 'codigo',
     tom: 'azul',
@@ -88,7 +88,7 @@ export const disciplinas: Disciplina[] = [
       {
         etapa: 'Etapa 4',
         tema: 'Publicação & versionamento',
-        descricao: 'Git, repositórios no GitHub e publicação contínua com GitHub Pages e Vercel.',
+        descricao: 'Git, repositórios no GitHub e publicação contínua com GitHub Pages.',
       },
     ],
     materiais: [
