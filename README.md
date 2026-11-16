@@ -191,32 +191,21 @@ public/midia/           Imagens e vídeos substituíveis
 
 ## Publicação
 
-O site roda como **aplicação Node.js (Next.js)** no plano Business da Hostinger, em `profabnerlucas.com`. A Hostinger instala as dependências, roda `npm run build` e inicia o servidor (`next start`). O destino está registrado em [`.hostinger/site.json`](.hostinger/site.json).
+O site é **estático**: `npm run build` gera a pasta `out/` com HTML, CSS, JS, mídias, fontes e um `.htaccess`. A Hostinger serve esses arquivos diretamente, sem processo Node.js no servidor. Animações, simuladores, tema e preferências rodam no navegador, então nada muda para o visitante.
 
-- A página é gerada no servidor e **regerada sozinha uma vez por dia** (`revalidate` em `app/page.tsx`): estrelas e datas do GitHub, além de mídias trocadas, se atualizam sem novo envio.
-- Mudanças em `conteudo/`, nos componentes ou em `public/midia/` precisam de um novo deploy.
+- Estrelas e datas do GitHub são lidas no build e atualizadas a cada publicação.
+- As fontes ficam em `app/fontes/`: o build não depende do Google Fonts.
+- O `.htaccess` (em `public/`) força HTTPS, remove o `www`, ativa compressão e cache e usa `404.html`.
 
 ### Como publicar uma atualização
 
-Pelo Claude Code, com o conector da Hostinger ativo: peça "publique o site". O deploy envia o código-fonte (sem `node_modules`, `.next` e arquivos `.env`) e a Hostinger faz o build. O andamento aparece em **hPanel → Websites → profabnerlucas.com → Node.js**.
-
-Manualmente pelo hPanel: em **Websites → profabnerlucas.com → Node.js**, envie um `.zip` do código-fonte (sem `node_modules` e `.next`) com estas configurações:
-
-| Campo              | Valor     |
-| ------------------ | --------- |
-| Framework          | Next.js   |
-| Versão do Node     | 22        |
-| Script de build    | `build`   |
-| Diretório de saída | `.next`   |
-| Gerenciador        | npm       |
-
-Variáveis de ambiente opcionais (`APP_URL`, `GITHUB_TOKEN`) ficam na mesma tela, em **Variáveis de ambiente**.
+1. Edite o conteúdo e rode `npm run build`.
+2. Envie **o conteúdo da pasta `out/`** para `public_html` de profabnerlucas.com (pelo Claude Code com o conector da Hostinger, ou no hPanel em Gerenciador de Arquivos). O `index.html` fica direto em `public_html`.
 
 ### O que não vai para o servidor
 
 | Arquivo/pasta                          | Por quê                                     |
 | -------------------------------------- | ------------------------------------------- |
-| `node_modules/`, `.next/`              | Gerados pela Hostinger no build             |
+| Código-fonte, `node_modules/`, `.next/` | Só o conteúdo de `out/` é publicado        |
 | `versao-anterior-ai-studio.zip`        | Backup local da versão do AI Studio         |
 | `CLAUDE.local.md`, `.env*`             | Configurações locais                        |
-| `lib/*.test.ts`                        | Testes, rodados só no seu computador        |
