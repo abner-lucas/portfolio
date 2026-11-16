@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, Manrope, JetBrains_Mono, Caveat } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Provedores } from '@/componentes/layout/Provedores';
 import { Carregamento } from '@/componentes/layout/Carregamento';
 import { BarraProgresso } from '@/componentes/layout/Progresso';
@@ -10,10 +10,12 @@ import { disciplinas } from '@/conteudo/disciplinas';
 import { perfil } from '@/conteudo/perfil';
 import './globals.css';
 
-const display = Bricolage_Grotesque({ subsets: ['latin'], variable: '--fonte-display', display: 'swap' });
-const texto = Manrope({ subsets: ['latin'], variable: '--fonte-texto', display: 'swap' });
-const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--fonte-mono', display: 'swap' });
-const mao = Caveat({ subsets: ['latin'], variable: '--fonte-mao', display: 'swap', weight: ['600', '700'] });
+// Fontes guardadas no próprio projeto (app/fontes/, subconjunto latin, eixos variáveis):
+// o build não depende de baixar nada do Google Fonts.
+const display = localFont({ src: './fontes/bricolage-grotesque.woff2', weight: '200 800', variable: '--fonte-display', display: 'swap' });
+const texto = localFont({ src: './fontes/manrope.woff2', weight: '200 800', variable: '--fonte-texto', display: 'swap' });
+const mono = localFont({ src: './fontes/jetbrains-mono.woff2', weight: '100 800', variable: '--fonte-mono', display: 'swap' });
+const mao = localFont({ src: './fontes/caveat.woff2', weight: '400 700', variable: '--fonte-mao', display: 'swap' });
 
 const titulo = `${perfil.titulo} · IFPA ${perfil.campus}`;
 const descricao =
