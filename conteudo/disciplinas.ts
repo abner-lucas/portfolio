@@ -12,6 +12,7 @@ import type { Disciplina } from '@/lib/tipos';
 
 const CG = 'https://abner-lucas.github.io/computacao-grafica';
 const WEB = 'https://abner-lucas.github.io/programacao-web';
+const ELETRONICA = 'https://abner-lucas.github.io/eletronica-basica';
 
 export const disciplinas: Disciplina[] = [
   {
@@ -138,12 +139,48 @@ export const disciplinas: Disciplina[] = [
     curso: 'Técnico em Informática',
     cargaHoraria: 67,
     periodo: '2026.1',
-    resumo: 'Grandezas elétricas, componentes e circuitos que estão por trás de todo computador.',
-    topicos: ['Tensão, corrente e resistência', 'Lei de Ohm', 'Componentes passivos', 'Circuitos e medições'],
+    resumo:
+      'Do elétron ao circuito: grandezas elétricas, Lei de Ohm, resistores, instrumentos de medição, componentes e circuitos práticos.',
+    topicos: ['Grandezas elétricas', 'Lei de Ohm e potência', 'Resistores e associações', 'Multímetro e protoboard', 'Diodos, LEDs e transistores', 'Fontes e retificação'],
     icone: 'chip',
     tom: 'ambar',
-    planoDeAulas: [],
-    materiais: [],
+    planoDeAulas: [
+      {
+        etapa: 'Etapa 1',
+        tema: 'Grandezas elétricas',
+        descricao: 'Carga, tensão, corrente, resistência e potência; unidades do SI, prefixos e notação científica.',
+      },
+      {
+        etapa: 'Etapa 2',
+        tema: 'Lei de Ohm & potência',
+        descricao: 'Relação entre V, I e R, dissipação de potência e efeito Joule.',
+      },
+      {
+        etapa: 'Etapa 3',
+        tema: 'Resistores & associações',
+        descricao: 'Código de cores, associações em série, paralelo e mista, divisores de tensão e de corrente.',
+      },
+      {
+        etapa: 'Etapa 4',
+        tema: 'Instrumentos de medição',
+        descricao: 'Multímetro para medir tensão, corrente e resistência; protoboard e fontes de alimentação.',
+      },
+      {
+        etapa: 'Etapa 5',
+        tema: 'Componentes eletrônicos',
+        descricao: 'Capacitores, indutores, diodos, LEDs e transistores.',
+      },
+      {
+        etapa: 'Etapa 6',
+        tema: 'Circuitos práticos',
+        descricao: 'Fontes de alimentação, retificação, circuitos com LED e introdução à eletrônica digital.',
+      },
+    ],
+    materiais: [
+      { titulo: 'Portal da disciplina', tipo: 'portal', url: `${ELETRONICA}/`, descricao: 'Avisos, trilha, atividades e materiais da turma.' },
+      { titulo: 'Laboratório virtual · Lei de Ohm e código de cores', tipo: 'exercicio', url: `${ELETRONICA}/#laboratorio`, descricao: 'Simulador de LED em série, calculadora da Lei de Ohm e decodificador de cores.' },
+      { titulo: 'Código-fonte no GitHub', tipo: 'repositorio', url: 'https://github.com/abner-lucas/eletronica-basica' },
+    ],
   },
   {
     id: 'manutencao-e-suporte',
