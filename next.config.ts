@@ -2,9 +2,13 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // Aplicação Node.js na Hostinger. O modo standalone gera um servidor enxuto,
-  // que o servidor consegue iniciar com menos memória que o `next start` completo.
-  output: 'standalone',
+  // Site estático: `npm run build` gera a pasta `out/` (HTML, CSS, JS e mídias),
+  // servida diretamente pela Hostinger, sem processo Node.js rodando no servidor.
+  // Animações e interações rodam no navegador e continuam iguais.
+  output: 'export',
+  // Cada página vira uma pasta com index.html (/sobre/index.html), formato que
+  // qualquer servidor web entende para o endereço /sobre.
+  trailingSlash: true,
   poweredByHeader: false,
 };
 

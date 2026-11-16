@@ -4,9 +4,9 @@ import type { Subapp } from './tipos';
 /**
  * Integração com a API pública do GitHub.
  *
- * Roda apenas no servidor. O resultado fica em cache por 24h e a página é
- * regerada sozinha uma vez por dia (veja `revalidate` em `app/page.tsx`). Se a
- * API falhar ou atingir o limite, o site continua com os dados de `conteudo/`.
+ * Roda durante o build (`npm run build`): estrelas e datas ficam gravadas no
+ * site gerado e são atualizadas a cada nova publicação. Se a API falhar ou
+ * atingir o limite, o site continua com os dados de `conteudo/`.
  *
  * Opcional: defina `GITHUB_TOKEN` no ambiente para aumentar o limite.
  */
@@ -27,7 +27,7 @@ async function buscarRepositorios(usuario: string): Promise<RepositorioApi[] | n
           Accept: 'application/vnd.github+json',
           ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}),
         },
-        next: { revalidate: 86400 },
+        cache: 'force-cache',
         signal: AbortSignal.timeout(5000),
       },
     );

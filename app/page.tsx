@@ -16,9 +16,6 @@ import { Portais } from '@/componentes/secoes/Portais';
 import { Destaques } from '@/componentes/secoes/Destaques';
 import { Contato } from '@/componentes/secoes/Contato';
 
-/** Regera a página (consulta o GitHub e as mídias de novo) no máximo uma vez por dia. */
-export const revalidate = 86400;
-
 const SECOES = [
   { id: 'inicio', rotulo: 'Início' },
   { id: 'sobre', rotulo: 'Quem sou' },

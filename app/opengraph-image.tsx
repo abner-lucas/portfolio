@@ -5,7 +5,7 @@ import { perfil } from '@/conteudo/perfil';
 export const alt = `${perfil.titulo} · IFPA ${perfil.campus}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-/** Gerada uma vez no build; não muda entre visitas. */
+/** Gerada uma vez no build (exigido pela exportação estática). */
 export const dynamic = 'force-static';
 
 export default function ImagemCompartilhamento() {

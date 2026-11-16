@@ -7,8 +7,6 @@ import { ProximaPagina } from '@/componentes/layout/ProximaPagina';
 import { Laboratorio } from '@/componentes/secoes/Laboratorio';
 import { Experimente } from '@/componentes/secoes/Experimente';
 
-export const revalidate = 86400;
-
 export const metadata: Metadata = {
   title: 'Laboratório',
   description: 'Subapps educacionais e experimentos interativos: robô seguidor de linha, sólidos 3D, perceptron e ondas cerebrais.',
