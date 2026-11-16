@@ -143,9 +143,7 @@ export const disciplinas: Disciplina[] = [
     icone: 'chip',
     tom: 'ambar',
     planoDeAulas: [],
-    materiais: [
-      { titulo: 'Portal da disciplina', tipo: 'portal', url: 'https://abner-lucas.github.io/eletronica-basica' },
-    ],
+    materiais: [],
   },
   {
     id: 'manutencao-e-suporte',
