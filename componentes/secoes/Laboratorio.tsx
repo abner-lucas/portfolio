@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, Code2, ExternalLink, Maximize2, Star } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Code2, ExternalLink, Maximize2, Star } from 'lucide-react';
 import type { Subapp } from '@/lib/tipos';
 import { formatarData } from '@/lib/regras';
 import { Secao } from '@/componentes/ui/Secao';
@@ -173,6 +173,21 @@ export function Laboratorio({ subapps, usuarioGithub, numero = 1 }: LaboratorioP
                       <span className="sr-only"> de {s.nome} (abre em nova aba)</span>
                     </a>
                   )}
+                  {s.links?.map((l) => (
+                    <a
+                      key={l.url}
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(
+                        'inline-flex min-h-11 items-center gap-2 rounded-full border px-4 text-sm font-semibold transition',
+                        i % 2 ? 'border-borda hover:border-tinta/40' : 'border-palco-borda hover:border-lima hover:text-lima',
+                      )}
+                    >
+                      <BookOpen className="size-4" /> {l.rotulo}
+                      <span className="sr-only"> de {s.nome} (abre em nova aba)</span>
+                    </a>
+                  ))}
                   <a
                     href={`https://github.com/${usuarioGithub}/${s.repositorio}`}
                     target="_blank"

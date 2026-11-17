@@ -101,6 +101,8 @@ export interface Subapp {
   tom: Tom;
   /** Pode ser aberto dentro do site em um quadro (iframe). */
   incorporavel: boolean;
+  /** Links extras exibidos como botões no cartão (ex.: plano de aula). */
+  links?: LinkExterno[];
   /** Dados preenchidos pela API do GitHub em tempo de build. */
   estrelas?: number;
   atualizadoEm?: string;

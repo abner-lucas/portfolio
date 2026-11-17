@@ -33,6 +33,9 @@ export const subapps: Subapp[] = [
     capa: 'letramento-ia',
     tom: 'violeta',
     incorporavel: true,
+    links: [
+      { rotulo: 'Plano de aula · Módulo 1', url: 'https://abner-lucas.github.io/letramento-digital-em-ia/plano/modulo-1/turma/' },
+    ],
   },
   {
     id: 'monitor-acai',
