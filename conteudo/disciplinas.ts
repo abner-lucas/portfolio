@@ -12,6 +12,7 @@ import type { Disciplina } from '@/lib/tipos';
 
 const CG = 'https://abner-lucas.github.io/computacao-grafica';
 const WEB = 'https://abner-lucas.github.io/programacao-web';
+const ED = 'https://abner-lucas.github.io/estrutura-de-dados';
 
 export const disciplinas: Disciplina[] = [
   {
@@ -111,8 +112,25 @@ export const disciplinas: Disciplina[] = [
     topicos: ['Vetores e matrizes', 'Listas encadeadas', 'Pilhas e filas', 'Recursão', 'Árvores', 'Busca e ordenação'],
     icone: 'arvore',
     tom: 'verde',
-    planoDeAulas: [],
-    materiais: [],
+    planoDeAulas: [
+      { etapa: 'Etapa 1', tema: 'Vetores e matrizes', descricao: 'Memória contígua, acesso por índice em O(1), percursos e operações com vetores e matrizes.' },
+      { etapa: 'Etapa 2', tema: 'Listas encadeadas', descricao: 'Nós e ponteiros: inserção, remoção e busca sem precisar de memória contígua.' },
+      { etapa: 'Etapa 3', tema: 'Pilhas e filas', descricao: 'As disciplinas LIFO e FIFO e onde elas aparecem: desfazer, chamadas de função e filas de atendimento.' },
+      { etapa: 'Etapa 4', tema: 'Recursão', descricao: 'Funções que chamam a si mesmas, caso base e a pilha de chamadas por trás de cada uma.' },
+      { etapa: 'Etapa 5', tema: 'Árvores', descricao: 'Árvores binárias e de busca: raiz, folhas, altura, inserção, busca e percursos.' },
+      { etapa: 'Etapa 6', tema: 'Busca e ordenação', descricao: 'Busca sequencial e binária, algoritmos de ordenação e a análise do custo de cada um.' },
+    ],
+    materiais: [
+      { titulo: 'Portal da disciplina', tipo: 'portal', url: `${ED}/`, descricao: 'Avisos, trilha, atividades e laboratório da turma.' },
+      { titulo: 'Apresentação · Árvores binárias de busca', tipo: 'slides', url: `${ED}/aulas/01-arvores-binarias/`, descricao: 'Slides da aula sobre árvores binárias de busca.' },
+      { titulo: 'Simulador passo a passo · Árvore binária', tipo: 'exercicio', url: `${ED}/aulas/01-arvores-binarias/simulador/`, descricao: 'Executa o código Python da aula uma linha por vez.' },
+      { titulo: 'Exercícios no Colab · Árvore binária de busca', tipo: 'exercicio', url: 'https://colab.research.google.com/github/abner-lucas/estrutura-de-dados/blob/main/aulas/01-arvores-binarias/simulador/materiais/exercicios-abb-aluno.ipynb' },
+      { titulo: 'Cartões da árvore humana', tipo: 'apostila', url: `${ED}/aulas/01-arvores-binarias/simulador/materiais/cartoes-arvore-humana.pdf`, descricao: 'PDF para imprimir e montar a árvore em sala.' },
+      { titulo: 'Colab · Praticando listas encadeadas', tipo: 'exercicio', url: 'https://colab.research.google.com/drive/1gam0BepX1Y_SDAF9RjcFqB5qK3qfywkA', descricao: 'Aula prática de 20 ago 2026.' },
+      { titulo: 'Colab · Praticando hashing', tipo: 'exercicio', url: 'https://colab.research.google.com/drive/1gi2oXQX2JHpepk0cnlJdIETvv4-Od0U6', descricao: 'Aula prática de 10 set 2026.' },
+      { titulo: 'Laboratório interativo', tipo: 'portal', url: `${ED}/#laboratorio`, descricao: 'Visualizador de pilha, fila e lista ligada, ordenação passo a passo e árvore binária de busca.' },
+      { titulo: 'Código-fonte no GitHub', tipo: 'repositorio', url: 'https://github.com/abner-lucas/estrutura-de-dados' },
+    ],
   },
   {
     id: 'redes-de-computadores',
