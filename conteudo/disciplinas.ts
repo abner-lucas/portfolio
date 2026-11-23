@@ -13,6 +13,7 @@ import type { Disciplina } from '@/lib/tipos';
 const CG = 'https://abner-lucas.github.io/computacao-grafica';
 const WEB = 'https://abner-lucas.github.io/programacao-web';
 const ED = 'https://abner-lucas.github.io/estrutura-de-dados';
+const RC = 'https://abner-lucas.github.io/redes-computadores';
 
 export const disciplinas: Disciplina[] = [
   {
@@ -139,13 +140,41 @@ export const disciplinas: Disciplina[] = [
     curso: 'Técnico em Informática',
     cargaHoraria: 67,
     periodo: '2026.1',
-    resumo: 'Do cabo ao aplicativo: modelo OSI, TCP/IP, endereçamento e os serviços que mantêm a internet de pé.',
-    topicos: ['Modelo OSI', 'Pilha TCP/IP', 'Endereçamento IP', 'Cabeamento e equipamentos', 'Serviços de rede'],
+    resumo: 'Do cabo ao aplicativo: como uma mensagem sai do celular, atravessa a rede e chega do outro lado — cabeamento, modelo OSI e arquitetura TCP/IP.',
+    topicos: ['Tipos e modelos de redes', 'Dispositivos e topologias', 'Meios de transmissão', 'Cabo UTP (T568A/T568B)', 'Modelo OSI', 'Arquitetura TCP/IP'],
     icone: 'rede',
     tom: 'coral',
-    planoDeAulas: [],
+    planoDeAulas: [
+      {
+        etapa: 'Unidade 1',
+        tema: 'Fundamentos',
+        descricao: 'O que é uma rede e como ela se organiza: introdução, tipos de redes (PAN a WAN), Internet, intranet e extranet, e modelos de redes.',
+      },
+      {
+        etapa: 'Unidade 2',
+        tema: 'Infraestrutura e topologias',
+        descricao: 'Dispositivos de interconexão, domínios de broadcast e colisão, topologias físicas e meios de transmissão guiados e não guiados.',
+      },
+      {
+        etapa: 'Unidade 3',
+        tema: 'Cabeamento e modelo OSI',
+        descricao: 'Padrões T568A e T568B, montagem de cabo UTP em sala, a padronização da ISO e as sete camadas do modelo OSI.',
+      },
+      {
+        etapa: 'Unidade 4',
+        tema: 'Arquitetura TCP/IP',
+        descricao: 'Pilha de protocolos e camadas do TCP/IP, elementos de interconexão e a Missão OSI como prática final.',
+      },
+    ],
     materiais: [
+      { titulo: 'Portal da disciplina', tipo: 'portal', url: `${RC}/`, descricao: 'Aulas por unidade, avisos, laboratórios e trilha do semestre.' },
+      { titulo: 'Aulas por unidade', tipo: 'portal', url: `${RC}/#aulas`, descricao: 'Tópicos e material de cada uma das 13 aulas.' },
+      { titulo: 'Laboratório · Monte o cabo UTP', tipo: 'exercicio', url: `${RC}/#lab-cabo`, descricao: 'Monte a pinagem T568A ou T568B fio a fio e confira.' },
+      { titulo: 'Laboratório · Em qual camada?', tipo: 'exercicio', url: `${RC}/#lab-camada`, descricao: 'Quiz: em qual camada do modelo OSI cada equipamento ou protocolo trabalha.' },
+      { titulo: 'Simulador · Envie uma mensagem pela rede', tipo: 'exercicio', url: `${RC}/#lab-envio`, descricao: 'Cada camada do OSI acrescenta sua etiqueta; avance camada por camada.' },
       { titulo: 'Missão OSI · Investigadores da Rede', tipo: 'portal', url: 'https://osi.profabnerlucas.com/', descricao: 'Diagnóstico gamificado das 7 camadas + desafio integrador (~3 encontros).' },
+      { titulo: 'Slides das aulas (Google Sala de Aula)', tipo: 'slides', url: 'https://classroom.google.com/', descricao: 'PDFs de todas as aulas na turma. Código da turma: g4nkpcli.' },
+      { titulo: 'Código-fonte do portal', tipo: 'repositorio', url: 'https://github.com/abner-lucas/redes-computadores' },
       { titulo: 'Código-fonte do Missão OSI', tipo: 'repositorio', url: 'https://github.com/abner-lucas/missao-osi' },
     ],
   },
