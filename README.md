@@ -199,8 +199,11 @@ O site é **estático**: `npm run build` gera a pasta `out/` com HTML, CSS, JS, 
 
 ### Como publicar uma atualização
 
-1. Edite o conteúdo e rode `npm run build`.
-2. Envie **o conteúdo da pasta `out/`** para `public_html` de profabnerlucas.com (pelo Claude Code com o conector da Hostinger, ou no hPanel em Gerenciador de Arquivos). O `index.html` fica direto em `public_html`.
+A Hostinger está ligada a este repositório (ramo `main`). **Cada envio (`git push`) para `main` publica o site sozinho**: ela roda `npm run build` e coloca no ar só a pasta `out/`, como arquivos estáticos, sem servidor Node.js rodando.
+
+Configuração no hPanel (Websites → profabnerlucas.com → Node.js), já salva: framework **Vite** (usado como gerador de site estático), Node 22, script `build`, pasta de saída `out`, npm.
+
+O andamento de cada publicação aparece no hPanel, no histórico de builds do site.
 
 ### O que não vai para o servidor
 
