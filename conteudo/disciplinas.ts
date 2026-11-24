@@ -14,6 +14,7 @@ const CG = 'https://abner-lucas.github.io/computacao-grafica';
 const WEB = 'https://abner-lucas.github.io/programacao-web';
 const ED = 'https://abner-lucas.github.io/estrutura-de-dados';
 const RC = 'https://abner-lucas.github.io/redes-computadores';
+const MSC = 'https://abner-lucas.github.io/manutencao-suporte-pc';
 
 export const disciplinas: Disciplina[] = [
   {
@@ -201,12 +202,43 @@ export const disciplinas: Disciplina[] = [
     curso: 'Técnico em Informática',
     cargaHoraria: 67,
     periodo: '2026.1',
-    resumo: 'Montagem, diagnóstico e manutenção de computadores, sistemas operacionais e boas práticas de suporte.',
-    topicos: ['Arquitetura do PC', 'Montagem e desmontagem', 'Diagnóstico de falhas', 'Instalação de sistemas'],
+    resumo: 'Abra. Entenda. Conserte. Montagem e configuração de hardware, partições, instalação de sistemas e diagnóstico com método: do sintoma à peça.',
+    topicos: ['Componentes e fontes', 'Placa-mãe, memória e armazenamento', 'BIOS/UEFI e partições MBR × GPT', 'Instalação de sistemas', 'Diagnóstico de defeitos', 'Testes e benchmark'],
     icone: 'ferramenta',
     tom: 'lima',
-    planoDeAulas: [],
-    materiais: [],
+    planoDeAulas: [
+      {
+        etapa: 'Unidade 1',
+        tema: 'Conceitos, componentes e fontes',
+        descricao: 'Confiabilidade e manutenibilidade (NBR 5462), principais componentes do PC, monitores e fontes de alimentação ATX; montagem de um PC on-line.',
+      },
+      {
+        etapa: 'Unidade 2',
+        tema: 'Placa-mãe, memória e armazenamento',
+        descricao: 'Modelo ATX, chipsets e firmwares; memória RAM, dual channel, HDD e SSD, interfaces SATA e NVMe e monitoramento SMART.',
+      },
+      {
+        etapa: 'Unidade 3',
+        tema: 'Inicialização, sistemas e instalação',
+        descricao: 'Da BIOS à UEFI, tabelas MBR × GPT, FAT32 × NTFS; instalação do Windows em máquina virtual e particionamento em C: e D:.',
+      },
+      {
+        etapa: 'Unidade 4',
+        tema: 'Bancada, testes e desempenho',
+        descricao: 'Teste de fonte, montagem e desmontagem na bancada e laboratório de benchmark com testes de estresse e registro de medições.',
+      },
+    ],
+    materiais: [
+      { titulo: 'Portal da disciplina', tipo: 'portal', url: `${MSC}/`, descricao: 'Avisos, ordens de serviço das aulas práticas, laboratórios e trilha.' },
+      { titulo: 'Plano da disciplina', tipo: 'portal', url: `${MSC}/disciplina/`, descricao: 'Aulas por unidade, avaliações e bibliografia.' },
+      { titulo: 'Bancada de montagem e POST', tipo: 'exercicio', url: `${MSC}/#bancada`, descricao: 'Encaixe as peças na placa-mãe, ligue e veja o defeito que cada peça faltando provoca.' },
+      { titulo: 'Roteiro de diagnóstico de defeitos', tipo: 'exercicio', url: `${MSC}/#lab-diagnostico`, descricao: 'Do sintoma à causa: "não liga" e outros chamados de cliente.' },
+      { titulo: 'Particionador MBR × GPT', tipo: 'exercicio', url: `${MSC}/#lab-particoes`, descricao: 'Planeje as partições de um disco e veja por que 4 TB em MBR "perdem" espaço.' },
+      { titulo: 'Teclado de termos técnicos', tipo: 'portal', url: `${MSC}/#termos`, descricao: 'Glossário interativo do hardware, da BIOS e do atendimento.' },
+      { titulo: 'Laboratório de benchmark · roteiro', tipo: 'apostila', url: `${MSC}/laboratorio-benchmark/`, descricao: 'Testes de estresse, medições e laudo técnico.' },
+      { titulo: 'Apresentação · Laboratório de benchmark', tipo: 'slides', url: `${MSC}/laboratorio-benchmark/apresentacao/` },
+      { titulo: 'Código-fonte no GitHub', tipo: 'repositorio', url: 'https://github.com/abner-lucas/manutencao-suporte-pc' },
+    ],
   },
   {
     id: 'informatica-basica',
